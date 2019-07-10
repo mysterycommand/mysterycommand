@@ -25,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/mysterycommand/mysterycommand/issues"
   },
-  "homepage": "https://mysterycommand.github.io"
+  "homepage": "https://mysterycommand.github.io",
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.10.0"
+  }
 }

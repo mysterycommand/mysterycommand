@@ -29,5 +29,8 @@
   "engines": {
     "node": "10.16.0",
     "npm": "6.10.0"
+  },
+  "devDependencies": {
+    "gatsby-cli": "2.7.9"
   }
 }

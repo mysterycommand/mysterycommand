@@ -1,2 +1,2 @@
-# mysterycommand
-Source code for a "new" personal/portfolio website.
+# Source for [mysterycommand.github.io](https://mysterycommand.github.io)
+> by [Matt Hayes](https://github.com/mysterycommand)

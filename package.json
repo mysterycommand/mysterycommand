@@ -35,8 +35,20 @@
     "node": "10.16.0",
     "npm": "6.10.0"
   },
+  "dependencies": {
+    "gatsby": "2.13.14",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
   "devDependencies": {
+    "@types/jest": "24.0.15",
+    "@types/node": "12.6.2",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.4",
     "gatsby-cli": "2.7.10",
-    "jest": "24.8.0"
+    "gatsby-plugin-typescript": "2.1.1",
+    "jest": "24.8.0",
+    "prettier": "1.18.2",
+    "typescript": "3.5.3"
   }
 }

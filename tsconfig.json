@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-    /**
-     * copied from create-react-app
-     * @see: https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/scripts/utils/verifyTypeScriptSetup.js#L94-L133
-     */
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,10 +17,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-
-    /**
-     * customization and overrides
-     */
     "target": "esnext",
     "noImplicitAny": true,
     "noUnusedLocals": true,

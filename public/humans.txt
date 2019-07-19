@@ -1,0 +1,10 @@
+/* TEAM */
+Owner/Operator: Matt Hayes
+Site: https://mysterycommand.github.io
+Twitter: @mysterycommand
+Location: Washington, DC
+
+/* SITE */
+Last update: 2019/07/19
+Standards: HTML5, ESNext
+Components: Create React App, Jest, ThreeJS, TypeScript

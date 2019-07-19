@@ -3,14 +3,6 @@
   "version": "1.0.0",
   "description": "source code for my personal/portfolio website",
   "private": true,
-  "scripts": {
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "info": "gatsby info",
-    "clean": "gatsby clean",
-    "test": "jest"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mysterycommand/mysterycommand.git"
@@ -48,6 +40,28 @@
     "@types/react-dom": "16.8.4",
     "jest": "24.8.0",
     "prettier": "1.18.2",
+    "react-scripts": "3.0.1",
     "typescript": "3.5.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">1%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

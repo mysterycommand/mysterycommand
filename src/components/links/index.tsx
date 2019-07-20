@@ -22,7 +22,7 @@ const Links: FC = () => (
         Icon: FaLinkedinIn,
       },
     ].map(({ href, title, Icon }) => (
-      <li>
+      <li key={`${title}: ${href}`}>
         <a href={href} title={title}>
           <Icon />
         </a>

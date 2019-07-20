@@ -8,4 +8,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0;
+}
+
+h1 + h1 {
+  margin-left: -0.875em;
+}
+
+ul {
+  margin: 0 0 0 0.125em;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0.5em 0;
+}
+
+li + li {
+  padding-left: 0.75em;
+}
+
+a {
+  color: #000000;
 }

@@ -1,5 +1,5 @@
 .app {
-  background: #fe54a1;
+  background-image: radial-gradient(circle, yellow, #fe54a1);
   color: #000000;
 
   width: 100%;
@@ -9,6 +9,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+header {
+  width: 320px;
+  text-shadow: 0 0 500px #ffffff;
 }
 
 h1 {

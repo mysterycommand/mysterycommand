@@ -1,0 +1,60 @@
+language: node_js
+
+cache:
+  directories:
+    # cache npm
+    - $HOME/.npm
+    - node_modules
+    - $TRAVIS_BUILD_DIR/node_modules
+
+env:
+  global:
+    - secure: QuM9d7BIETW1q6h6CP3Wq/Bj9pefBRtCZYntdYQjNw3TxF7yKFF5vt80eNa23bO7+lHBpuvS1uOuePWnUbgL0bKSPaur5TnQb/jo8bah+Y79fpOrq8INEIeUvpfXBlLo3yutM4XvscgnuZ+Pm5DexXKs1e7ATuEVuI8/1wNWTq93DOy6wb5fZAKU+V5lv5MRkqFUVNyNvaPyDNVZAC2HUZgFDm0ligilDgVoyI85Fu3ao+tDOmxrPYbKQ0WtFnyFPFXkiPJxldwEWxi2ptvZXst4TfZGPGaD3oAb/Wvyl/1qoQV3L2Dg6nAH08WFa3wJZh5JvGhiqxvDC1cyzQLRfyaQEWUERVm5jdVxg5n02KO5ojG3IR3ovI4CQTBc6u2MpxQfQsU+/k0LYAsRgqhTOEBeZfqKPGq4rfOWkIVNtAAeRzggqlx+a0QUqFRg8QxSWzPPtTMD2nUFUeAqXc4y7dO/CDVNnxpHPtqxvahylK4Iys2FYyKCCfqq2kvOigG17M2k/6arhrOg2p/tKNmhr30OaIxu5ZPYODLMFSydPw7cArSJmiglL8Z+Tr6H0b/3CaV2tGGpYoYei4o9FZSRJThshFHyjrehVAUBFBt2ookV8pdJbMmR+MQrrbCBLXLzTlXBRrfTtZTTH/ZtRXVUZAUOHx0aqnU1lrf1GGwnkEQ=
+    - secure: r3Ung3VqmN2PPs4pldQNhiJgYTDfYMNXylMoinMug/CZmcJ7yHUOjSlDm4px03LQ3cbiZVmbKmepF452zwHEz4y3FRAGlDdZmYfCQOrE0AbShNe5a5B2PeXXrwRZSBjDuj1FZ5Tyyms5t1lsb/mmmEGiCtPXrXy38zUcopDPm/Gc7a0mOuxJjS+iMRPJ+SfZTAlwyL1pjjn5usjnHGQPpR2Exl5zkN7s1gc93BL9EaxoTuKz3xCXvvhIbRYAOusJe8hzhUZj5wZsOVOMv5ixdfBjop5yexP26b3hzexooOhKFoOqd1EoOli+p5Cc4dD3ovO4I6nZqiOOWsm+DX7ciSj5jKuJgMhSu/AG0OcTIW/cd0s2rczXtfFvRicktX6SbtKE2GsFHFg4g5M3mWa2dQaZBg/VD5Hex8EDwORUvBReAfWBOuSCWrC5olCynTUId2iwEAehSirRF1iziRBH/DvcAg66xw/zF6h+yxYGl4NHUhqM1mH+lfLydnz3HmqQIR/NIZZ/1tKEJWTUwd6Ibc7nNda2uEzmo6E5lmCgMDprWrlUOf9RNEG3zj6555uNEel9nTRUhB208vaCKroTxYJaECd3iKu84CbG5kgFHo39FaDTIBO1wr/3sCeFoDmlazfQXHqID9Nig3zvZoaA7OrA+lnGh7FG2E/fJN4eFRo=
+    - secure: rwaXalW3Zt8tHZqdN4/EZAXRVGk5hJCJCZgCt5j+Q3z9S6GB8YlwgEOFL0PXdg2Gb/HCl53WtgX1Ioea3qrAcVk0CF9uvEYu3mai9KKF0CdawCyO5oWOXyk4WLY0iYvgaMEoeP2zGZf4uXv+62NC53/gOfCh/hrldcuKmUtW+F6Z8HsYqnaLO6AKT9wwPj9zZP7De7Xb2aeU/1dT/dUt1fjAUviChMHYfhxn8lCC6BHAChXSVk+oCuVgRN6W+i8dRiOpPe583We6sV4wnb5oWbK3Zk8yZsZZFirDZElS6D1R5ATbMCejokRhCVHk3ZKsa0fxKniMTPLHh2cdA7sXHAFACau5TBVq8UX6ZOEeR5vmKaIs+t/Crjf0K/uLrXNWsUth1j2/vIdsgNw9P5eSg4QvAVP9vsDJyLRF7MIST9sg29QYl2Ry8X14EANqXwqbRzzzotLNEZAD5vKFwsC0ZRGCyHveDgs08s+4nfDHi1uYo5Yqbd8lmXwyh31N1X/q9O3nWnUO2IoYsNRO6LRnNVNwIvq5f0yTvkWXN5O0r2gN9gmL3AE2o1jVBCLNe8a74p6dqLUbbREqxIjnmmKdE4PIGYI5u/V3PFIjKGhv2m8ovtL9PDhIY0uQL4YxQEVqNeZksgBTv+LuUM3leWjBgDhi7p2KyENeFMnF+FbbgBs=
+
+before_install:
+  # get the right npm version
+  - NPM_VERSION=`node -pe "require('./package.json').engines.npm"`
+  - if [ `npm --version` != "$NPM_VERSION" ]; then
+    npm install --global npm@${NPM_VERSION};
+    fi
+
+before_script:
+  # code climate's coverage reporter
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+    > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - './cc-test-reporter before-build'
+
+script:
+  - npm run lint
+  - npm test
+  - npm run build
+
+after_success:
+  - test $TRAVIS_PULL_REQUEST != "false" && npx semantic-release-github-pr
+
+deploy:
+  # deploy a git tag, release notes, bump package.json, update READMEs
+  - provider: script
+    skip_cleanup: true
+    script: npx semantic-release
+    on:
+      branch: master
+
+  # deploy the site
+  - provider: pages
+    repo: mysterycommand/mysterycommand.github.io
+    target_branch: master
+    github_token: $GH_TOKEN
+    allow_empty_commit: true
+    skip_cleanup: true
+    keep_history: true
+    local_dir: dist/
+    on:
+      branch: master
+
+after_script:
+  # report coverage
+  - './cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT'

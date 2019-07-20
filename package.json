@@ -28,19 +28,32 @@
     "npm": "6.10.1"
   },
   "dependencies": {
+    "lodash": "4.17.15",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "react-icons": "3.7.0",
     "react-three-fiber": "2.2.11",
     "three": "0.106.2"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "3.0.4",
+    "@semantic-release/commit-analyzer": "6.2.0",
+    "@semantic-release/git": "7.0.16",
+    "@semantic-release/github": "5.4.2",
+    "@semantic-release/npm": "5.1.13",
+    "@semantic-release/release-notes-generator": "7.2.1",
     "@types/jest": "24.0.15",
+    "@types/lodash": "4.14.136",
     "@types/node": "12.6.2",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.0.1",
     "prettier": "1.18.2",
     "react-scripts": "3.0.1",
     "react-snap": "1.23.0",
+    "semantic-release": "15.13.18",
+    "semantic-release-github-pr": "git+https://github.com/mysterycommand/semantic-release-github-pr.git#fix/34-and-35",
     "typescript": "3.5.3"
   },
   "scripts": {
@@ -48,6 +61,7 @@
     "build": "react-scripts build",
     "postbuild": "react-snap",
     "test": "react-scripts test",
+    "lint": "eslint 'src/**/*.@(j|t)s?(x)'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

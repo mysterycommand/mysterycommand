@@ -23,6 +23,7 @@
     "declaration": false,
     "types": [
       "jest",
+      "lodash",
       "node",
       "react",
       "react-dom"

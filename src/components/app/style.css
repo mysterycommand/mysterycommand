@@ -1,5 +1,5 @@
 .app {
-  background: #fe54a1;
+  background-image: radial-gradient(circle, yellow, #fe54a1);
   color: #000000;
 
   width: 100%;
@@ -11,28 +11,15 @@
   flex-direction: column;
 }
 
+header {
+  width: 320px;
+  text-shadow: 0 0 500px #ffffff;
+}
+
 h1 {
   margin: 0;
 }
 
 h1 + h1 {
   margin-left: -0.875em;
-}
-
-ul {
-  margin: 0 0 0 0.125em;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0.5em 0;
-}
-
-li + li {
-  padding-left: 0.75em;
-}
-
-a {
-  color: #000000;
 }

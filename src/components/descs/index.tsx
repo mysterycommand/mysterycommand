@@ -27,7 +27,7 @@ const Descs: FC = () => {
   const [currentTitle, currentDescriptor] = useDescs();
 
   return (
-    <ul>
+    <ul className="descs">
       <li>artist</li>
       <li>{currentTitle}</li>
       <li>{currentDescriptor}</li>

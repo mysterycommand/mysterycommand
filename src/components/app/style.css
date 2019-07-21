@@ -13,18 +13,18 @@
 
 /* [min size] + ([max size] - [min size]) * ((100vw - [min view]) / ([max view] - [min view])) */
 
-header {
+.app > header {
   width: 375px;
   padding: 40px;
   box-sizing: border-box;
   text-shadow: 0 0 500px #ffffff;
 }
 
-h1 {
+.app h1 {
   margin: 0;
   font-size: 35px;
 }
 
-h1 + h1 {
+.app h1 + h1 {
   margin-left: -0.875em;
 }

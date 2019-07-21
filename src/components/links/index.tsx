@@ -4,7 +4,7 @@ import { FaGithub, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 import './style.css';
 
 const Links: FC = () => (
-  <ul>
+  <ul className="links">
     {[
       {
         href: 'https://github.com/mysterycommand/',

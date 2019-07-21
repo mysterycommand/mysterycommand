@@ -1,17 +1,7 @@
-ul {
-  margin: 0 0 0 0.125em;
-  padding: 0;
-}
-
-li {
+.links > li {
   display: inline-block;
-  margin: 0.5em 0;
 }
 
-li + li {
+.links > li + li {
   padding-left: 0.75em;
-}
-
-a {
-  color: #000000;
 }

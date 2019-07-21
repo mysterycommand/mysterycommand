@@ -1,14 +1,9 @@
-ul {
-  margin: 0 0 0 0.125em;
-  padding: 0;
+.descs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-li {
-  display: inline-block;
-  margin: 0.5em 0;
+.descs > li {
   font-size: 15px;
-}
-
-li + li {
-  padding-left: 0.75em;
 }

@@ -24,8 +24,8 @@ const state = window.__STATE__ as State;
 delete window.__STATE__;
 
 export const initialState: State = state || {
-  currentTitle: sample(titles)!,
-  currentDescriptor: sample(descriptors)!,
+  currentTitle: sample(titles)!, // 'creative technologist', //
+  currentDescriptor: sample(descriptors)!, // 'philosopher', //
 };
 
 // @ts-ignore: 2339

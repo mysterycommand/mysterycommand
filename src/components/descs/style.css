@@ -1,13 +1,15 @@
-ul {
-  margin: 0 0 0 0.125em;
-  padding: 0;
+.hlist.descs {
+  margin-top: calc(8px + (16 - 8) * ((100vw - 375px) / 375));
 }
 
-li {
-  display: inline-block;
-  margin: 0.5em 0;
+@media (max-width: 375px) {
+  .hlist.descs {
+    margin-top: 8px;
+  }
 }
 
-li + li {
-  padding-left: 0.75em;
+@media (min-width: 750px) {
+  .hlist.descs {
+    margin-top: 16px;
+  }
 }

@@ -3,8 +3,10 @@ import { FaGithub, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 
 import './style.css';
 
+import Hlist from '../hlist';
+
 const Links: FC = () => (
-  <ul>
+  <Hlist>
     {[
       {
         href: 'https://github.com/mysterycommand/',
@@ -22,13 +24,11 @@ const Links: FC = () => (
         Icon: FaLinkedinIn,
       },
     ].map(({ href, title, Icon }) => (
-      <li key={`${title}: ${href}`}>
-        <a href={href} title={title}>
-          <Icon />
-        </a>
-      </li>
+      <a key={`${title}: ${href}`} href={href} title={title}>
+        <Icon />
+      </a>
     ))}
-  </ul>
+  </Hlist>
 );
 
 export default Links;

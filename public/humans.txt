@@ -1,6 +1,6 @@
 /* TEAM */
 Owner/Operator: Matt Hayes
-Site: https://mysterycommand.github.io
+Site: https://mysterycommand.com
 Twitter: @mysterycommand
 Location: Washington, DC
 

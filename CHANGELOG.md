@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/mysterycommand/mysterycommand/compare/v1.1.0...v1.2.0) (2019-07-22)
+
+
+### Features
+
+* **hlist:** move the common horizontal list functionality (mostly styling) into a shared hlist ([2b44ee7](https://github.com/mysterycommand/mysterycommand/commit/2b44ee7))
+* **styles:** add class names to components, move a couple things up to global css scope ([bbf7198](https://github.com/mysterycommand/mysterycommand/commit/bbf7198))
+
 # [1.1.0](https://github.com/mysterycommand/mysterycommand/compare/v1.0.2...v1.1.0) (2019-07-20)
 
 

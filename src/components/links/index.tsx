@@ -12,6 +12,7 @@ const Links: FC = () => (
         htmlAnchorProps: {
           href: 'https://github.com/mysterycommand/',
           title: 'GitHub',
+          rel: 'external',
         },
         Icon: FaGithub,
       },
@@ -19,6 +20,7 @@ const Links: FC = () => (
         htmlAnchorProps: {
           href: 'https://twitter.com/mysterycommand/',
           title: 'Twitter',
+          rel: 'external',
         },
         Icon: FaTwitter,
       },
@@ -26,6 +28,7 @@ const Links: FC = () => (
         htmlAnchorProps: {
           href: 'https://www.linkedin.com/in/mysterycommand/',
           title: 'Linkedin',
+          rel: 'external',
         },
         Icon: FaLinkedinIn,
       },
@@ -34,6 +37,8 @@ const Links: FC = () => (
           href: `${process.env.PUBLIC_URL}/resume.pdf`,
           title: 'My resume (PDF)',
           download: 'Matt-Hayes-Resume.pdf',
+          type: 'application/pdf',
+          rel: 'author',
         },
         Icon: FaFilePdf,
       },

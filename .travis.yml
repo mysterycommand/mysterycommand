@@ -40,6 +40,7 @@ deploy:
   # deploy the site
   - provider: pages
     repo: mysterycommand/mysterycommand.github.io
+    fqdn: mysterycommand.com
     target_branch: master
     github_token: $GH_TOKEN
     allow_empty_commit: true

@@ -14,17 +14,40 @@
 /* [min size] + ([max size] - [min size]) * ((100vw - [min view]) / ([max view] - [min view])) */
 
 .app > header {
-  width: 375px;
-  padding: 40px;
+  width: 100vw;
+  min-width: 375px;
+  max-width: 750px;
+  padding: calc(40px + (80 - 40) * ((100vw - 375px) / 375));
   box-sizing: border-box;
   text-shadow: 0 0 500px #ffffff;
 }
 
 .app h1 {
   margin: 0;
-  font-size: 35px;
+  font-size: calc(35px + (70 - 35) * ((100vw - 375px) / 375));
 }
 
 .app h1 + h1 {
   margin-left: -0.875em;
+}
+
+@media (max-width: 375px) {
+  .app > header {
+    padding: 40px;
+  }
+
+  .app h1 {
+    margin: 0;
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 750px) {
+  .app > header {
+    padding: 80px;
+  }
+
+  .app h1 {
+    font-size: 70px;
+  }
 }

@@ -24,7 +24,7 @@ const state = window.__STATE__ as State;
 delete window.__STATE__;
 
 export const initialState: State = state || {
-  currentTitle: sample(titles)!, // 'creative technologist', //
+  currentTitle: sample(titles)!, // 'computer programmer', //
   currentDescriptor: sample(descriptors)!, // 'philosopher', //
 };
 

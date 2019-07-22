@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/mysterycommand/mysterycommand/compare/v1.2.0...v1.3.0) (2019-07-22)
+
+
+### Features
+
+* **domain:** mysterycommand.github.io -> mysterycommand.com ([5ae220b](https://github.com/mysterycommand/mysterycommand/commit/5ae220b))
+* **link-type attributes:** add link-type attributes, and a type attribute to my links ([3fb9894](https://github.com/mysterycommand/mysterycommand/commit/3fb9894))
+* **resume:** add an up to the minute copy of my resume an link to it in the links list ([3817ab6](https://github.com/mysterycommand/mysterycommand/commit/3817ab6))
+
 # [1.2.0](https://github.com/mysterycommand/mysterycommand/compare/v1.1.0...v1.2.0) (2019-07-22)
 
 

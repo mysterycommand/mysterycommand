@@ -60,8 +60,8 @@ const Splash: FC = () => {
           color={new Color('blue')}
           intensity={0.35}
         />
-        {new Array(5).fill(null).map((_, i) => (
-          <Box key={i} scale={1 + i} />
+        {new Array(10).fill(null).map((_, i) => (
+          <Box key={i} scale={1 + i / 2} />
         ))}
       </Canvas>
     </div>

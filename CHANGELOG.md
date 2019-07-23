@@ -1,3 +1,21 @@
+# [1.4.0](https://github.com/mysterycommand/mysterycommand/compare/v1.3.0...v1.4.0) (2019-07-23)
+
+
+### Bug Fixes
+
+* **splash:** don't try to wait for/render the react-three-fiber component in postbuild ([50c5b15](https://github.com/mysterycommand/mysterycommand/commit/50c5b15))
+
+
+### Features
+
+* **app:** add link to self in header ([43ba3a5](https://github.com/mysterycommand/mysterycommand/commit/43ba3a5))
+* **app/style:** make the text-shadow also scale, and make position relative on .app ([b48242c](https://github.com/mysterycommand/mysterycommand/commit/b48242c))
+* **splash:** add a react-three-fiber based splash div behind the header ([288f8df](https://github.com/mysterycommand/mysterycommand/commit/288f8df))
+* **splash:** add react-spring and animate the boxes intros ([238aa20](https://github.com/mysterycommand/mysterycommand/commit/238aa20))
+* **splash:** generate the boxes with an array map (more flexible scaling/number options) ([d84486b](https://github.com/mysterycommand/mysterycommand/commit/d84486b))
+* **splash, boxes, box:** refactor box and boxes into their own components, async load boxes ([9510c9a](https://github.com/mysterycommand/mysterycommand/commit/9510c9a))
+* **styles:** remove underline from the (new) big link in the header ([0c6eaf0](https://github.com/mysterycommand/mysterycommand/commit/0c6eaf0))
+
 # [1.3.0](https://github.com/mysterycommand/mysterycommand/compare/v1.2.0...v1.3.0) (2019-07-22)
 
 

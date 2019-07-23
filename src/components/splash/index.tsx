@@ -6,7 +6,7 @@ import { config } from 'react-spring';
 
 import './style.css';
 
-const Box: FC<{ scale?: number }> = ({ scale = 3 }) => {
+function useIntro(scale: number) {
   const box = useRef<Group>();
 
   useRender(() => {
@@ -28,6 +28,12 @@ const Box: FC<{ scale?: number }> = ({ scale = 3 }) => {
     config: config.molasses,
     delay: 1000 / scale,
   });
+
+  return [box, currentScale, currentOpacity];
+}
+
+const Box: FC<{ scale?: number }> = ({ scale = 3 }) => {
+  const [box, currentScale, currentOpacity] = useIntro(scale);
 
   return (
     <group ref={box}>

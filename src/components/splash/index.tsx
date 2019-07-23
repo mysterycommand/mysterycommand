@@ -20,7 +20,7 @@ function useIntro(scale: number) {
 
   const { currentScale, currentOpacity } = useSpring({
     from: {
-      currentScale: [0, 0, 0],
+      currentScale: [0.01, 0.01, 0.01],
       currentOpacity: 0,
     },
     currentScale: [scale, scale, scale],

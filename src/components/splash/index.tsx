@@ -26,7 +26,7 @@ function useIntro(scale: number) {
     currentScale: [scale, scale, scale],
     currentOpacity: 0.15,
     config: config.molasses,
-    delay: 1000 / scale,
+    delay: 500 / scale,
   });
 
   return [box, currentScale, currentOpacity];
@@ -60,11 +60,9 @@ const Splash: FC = () => {
           color={new Color('blue')}
           intensity={0.35}
         />
-        <Box scale={1} />
-        <Box scale={1.5} />
-        <Box scale={2} />
-        <Box scale={2.5} />
-        <Box scale={3} />
+        {new Array(5).fill(null).map((_, i) => (
+          <Box key={i} scale={1 + i} />
+        ))}
       </Canvas>
     </div>
   );

@@ -2,8 +2,6 @@ import React, { FC, AnchorHTMLAttributes } from 'react';
 import { FaGithub, FaTwitter, FaLinkedinIn, FaFilePdf } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib/esm';
 
-import './style.css';
-
 import Hlist from '../hlist';
 
 const links: {

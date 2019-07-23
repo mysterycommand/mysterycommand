@@ -22,7 +22,8 @@
 
   padding: calc(36px + (72 - 36) * ((100vw - 375px) / 375));
   box-sizing: border-box;
-  text-shadow: 0 0 calc(40px + (80 - 40) * ((100vw - 375px) / 375)) #ffffff;
+  text-shadow: 0 0 calc(40px + (80 - 40) * ((100vw - 375px) / 375)) #ffffff,
+    0 0 calc(40px + (80 - 40) * ((100vw - 375px) / 375)) #ffffff;
 
   z-index: 1;
 }
@@ -39,7 +40,7 @@
 @media (max-width: 375px) {
   .app > header {
     padding: 36px;
-    text-shadow: 0 0 40px #ffffff;
+    text-shadow: 0 0 40px #ffffff, 0 0 40px #ffffff;
   }
 
   .app h1 {
@@ -51,7 +52,7 @@
 @media (min-width: 750px) {
   .app > header {
     padding: 72px;
-    text-shadow: 0 0 80px #ffffff;
+    text-shadow: 0 0 80px #ffffff, 0 0 80px #ffffff;
   }
 
   .app h1 {

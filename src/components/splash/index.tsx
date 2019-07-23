@@ -1,12 +1,13 @@
-import React, { FC, useMemo, useRef } from 'react';
+import React, { FC, useRef } from 'react';
 import { Canvas, useRender } from 'react-three-fiber';
 import { Group, Color, Vector3 } from 'three';
+import { animated, useSpring } from 'react-spring/three';
+import { config } from 'react-spring';
 
 import './style.css';
 
 const Box: FC<{ scale?: number }> = ({ scale = 3 }) => {
   const box = useRef<Group>();
-  const meshScale = useMemo(() => new Vector3(scale, scale, scale), [scale]);
 
   useRender(() => {
     if (!(box && box.current)) {
@@ -17,12 +18,27 @@ const Box: FC<{ scale?: number }> = ({ scale = 3 }) => {
     box.current.rotation.y += 2 * (scale / 1000);
   });
 
+  const { currentScale, currentOpacity } = useSpring({
+    from: {
+      currentScale: [0, 0, 0],
+      currentOpacity: 0,
+    },
+    currentScale: [scale, scale, scale],
+    currentOpacity: 0.15,
+    config: config.molasses,
+    delay: 1000 / scale,
+  });
+
   return (
     <group ref={box}>
-      <mesh scale={meshScale}>
+      <animated.mesh scale={currentScale}>
         <boxGeometry attach="geometry" />
-        <meshLambertMaterial attach="material" opacity={0.15} transparent />
-      </mesh>
+        <animated.meshLambertMaterial
+          attach="material"
+          opacity={currentOpacity}
+          transparent
+        />
+      </animated.mesh>
     </group>
   );
 };

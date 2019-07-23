@@ -4,9 +4,11 @@ import './style.css';
 
 import Descs from '../descs';
 import Links from '../links';
+import Splash from '../splash';
 
 const App: FC = () => (
   <div className="app">
+    <Splash />
     <header>
       <h1>Matt Hayes is</h1>
       <h1>

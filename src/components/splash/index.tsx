@@ -13,7 +13,7 @@ const Splash: FC = () => {
       return;
     }
 
-    import('../boxes').then(({ default: Boxes }) => {
+    import('./boxes').then(({ default: Boxes }) => {
       setAsyncComponent(Boxes);
     });
   }, []);

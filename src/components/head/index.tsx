@@ -12,15 +12,15 @@ const Head: FC<{
   const title = `${author} is ${handle}`;
 
   const descs = titles.concat(descriptors);
-  const description = `artist, ${descs.join(', ')}`;
+  const longDescription = `artist, ${descs.join(', ')}`;
   const shortDescription = (() => {
-    let shortDescs = descs;
-    let desc = `artist, ${shortDescs.join(', ')}, etc…`;
-    while (desc.length > 200) {
-      shortDescs.pop();
-      desc = `artist, ${shortDescs.join(', ')}, etc…`;
+    let shortenedDescs = descs;
+    let description = `artist, ${shortenedDescs.join(', ')}, etc…`;
+    while (description.length > 200) {
+      shortenedDescs.pop();
+      description = `artist, ${shortenedDescs.join(', ')}, etc…`;
     }
-    return desc;
+    return description;
   })();
 
   const { origin, pathname } = window.location;
@@ -37,7 +37,7 @@ const Head: FC<{
       <Helmet>
         <title>{title}</title>
         <meta name="author" content={author} />
-        <meta name="description" content={description} />
+        <meta name="description" content={longDescription} />
 
         {/* Facebook */}
         <meta property="og:type" content="website" />

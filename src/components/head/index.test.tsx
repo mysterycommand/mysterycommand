@@ -4,6 +4,14 @@ import Head from '.';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  render(<Head />, div);
+  render(
+    <Head
+      author="Chonk McChunk"
+      handle="@chonky_boi"
+      titles={['chief chunker', 'senior associate chonk']}
+      descriptors={['distinguished', 'refined', 'elegant']}
+    />,
+    div,
+  );
   unmountComponentAtNode(div);
 });

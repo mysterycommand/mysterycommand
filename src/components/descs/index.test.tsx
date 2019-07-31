@@ -4,6 +4,9 @@ import Descs from '.';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  render(<Descs />, div);
+  render(
+    <Descs currentTitle="chief chunker" currentDescriptor="distinguished" />,
+    div,
+  );
   unmountComponentAtNode(div);
 });

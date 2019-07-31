@@ -1,0 +1,55 @@
+.hero {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.hero > header {
+  width: 100vw;
+  min-width: 375px;
+  max-width: 750px;
+
+  padding: calc(36px + (72 - 36) * ((100vw - 375px) / 375));
+  box-sizing: border-box;
+  text-shadow: 0 0 calc(40px + (80 - 40) * ((100vw - 375px) / 375)) #ffffff,
+    0 0 calc(40px + (80 - 40) * ((100vw - 375px) / 375)) #ffffff;
+
+  z-index: 1;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: calc(35px + (70 - 35) * ((100vw - 375px) / 375));
+}
+
+.hero h1 + h1 {
+  margin-left: -0.875em;
+}
+
+@media (max-width: 375px) {
+  .hero > header {
+    padding: 36px;
+    text-shadow: 0 0 40px #ffffff, 0 0 40px #ffffff;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 750px) {
+  .hero > header {
+    padding: 72px;
+    text-shadow: 0 0 80px #ffffff, 0 0 80px #ffffff;
+  }
+
+  .hero h1 {
+    font-size: 70px;
+  }
+}

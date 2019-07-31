@@ -1,32 +1,13 @@
-import React, { FC, useEffect, useReducer } from 'react';
+import React, { FC } from 'react';
 
 import './style.css';
 
-import { initialState, reducer, ActionType } from '../../reducer';
 import Hlist from '../hlist';
 
-function useDescs() {
-  const [{ currentTitle, currentDescriptor }, dispatch] = useReducer(
-    reducer,
-    initialState,
-  );
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      dispatch({ type: ActionType.Change });
-    }, 2500);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [currentTitle, currentDescriptor]);
-
-  return [currentTitle, currentDescriptor];
-}
-
-const Descs: FC = () => {
-  const [currentTitle, currentDescriptor] = useDescs();
-
+const Descs: FC<{
+  currentTitle: string;
+  currentDescriptor: string;
+}> = ({ currentTitle, currentDescriptor }) => {
   return (
     <Hlist className="descs">
       artist

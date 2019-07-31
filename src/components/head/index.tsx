@@ -2,13 +2,11 @@ import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
 
 const Head: FC<{
-  meta: {
-    author: string;
-    handle: string;
-  };
+  author: string;
+  handle: string;
   titles: string[];
   descriptors: string[];
-}> = ({ meta: { author, handle }, titles, descriptors }) => {
+}> = ({ author, handle, titles, descriptors }) => {
   const title = `${author} is ${handle}`;
 
   const descs = titles.concat(descriptors);

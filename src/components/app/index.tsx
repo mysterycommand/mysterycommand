@@ -1,25 +1,30 @@
-import React, { FC, useReducer } from 'react';
+import React, { FC } from 'react';
 
 import './style.css';
 
-import { initialState, reducer } from '../../reducer';
+import useAppState from '../../hooks/app-state';
 import Descs from '../descs';
 import Links from '../links';
 import Splash from '../splash';
 import Head from '../head';
 
 const App: FC = () => {
-  const [state] = useReducer(reducer, initialState);
-
   const {
     meta: { author, handle },
-    // titles,
-    // descriptors,
-  } = state;
+    titles,
+    currentTitle,
+    descriptors,
+    currentDescriptor,
+  } = useAppState();
 
   return (
     <>
-      <Head {...state} />
+      <Head
+        author={author}
+        handle={handle}
+        titles={titles}
+        descriptors={descriptors}
+      />
       <div className="app">
         <Splash />
         <header>
@@ -27,7 +32,10 @@ const App: FC = () => {
           <h1>
             <a href={process.env.PUBLIC_URL}>{handle}</a>
           </h1>
-          <Descs />
+          <Descs
+            currentTitle={currentTitle}
+            currentDescriptor={currentDescriptor}
+          />
           <Links />
         </header>
       </div>

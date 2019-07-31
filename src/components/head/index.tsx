@@ -13,7 +13,7 @@ const Head: FC<{
 
   const descs = titles.concat(descriptors);
   const description = `artist, ${descs.join(', ')}`;
-  const shortDescription = () => {
+  const shortDescription = (() => {
     let shortDescs = descs;
     let desc = `artist, ${shortDescs.join(', ')}, etc…`;
     while (desc.length > 200) {
@@ -21,7 +21,7 @@ const Head: FC<{
       desc = `artist, ${shortDescs.join(', ')}, etc…`;
     }
     return desc;
-  };
+  })();
 
   const { origin, pathname } = window.location;
   const image = (network: string) =>
@@ -44,7 +44,7 @@ const Head: FC<{
         <meta property="og:title" content={title} />
         <meta property="og:image" content={image('facebook')} />
         <meta property="og:image:alt" content={imageAlt} />
-        <meta property="og:description" content={description} />
+        <meta property="og:description" content={shortDescription} />
         <meta property="og:site_name" content={title} />
         <meta property="og:locale" content="en_US" />
         <meta property="article:author" content={author} />
@@ -54,7 +54,7 @@ const Head: FC<{
         <meta name="twitter:site" content={handle} />
         <meta name="twitter:creator" content={handle} />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={`${shortDescription}`} />
+        <meta name="twitter:description" content={shortDescription} />
         <meta name="twitter:image" content={image('twitter')} />
         <meta name="twitter:image:alt" content={imageAlt} />
       </Helmet>

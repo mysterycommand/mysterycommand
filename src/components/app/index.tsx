@@ -9,11 +9,21 @@ import Links from '../links';
 import Splash from '../splash';
 
 const App: FC = () => {
-  const [{ titles, descriptors }] = useReducer(reducer, initialState);
+  const [
+    {
+      meta: { author, handle },
+      titles,
+      descriptors,
+    },
+  ] = useReducer(reducer, initialState);
 
   return (
     <>
       <Helmet>
+        <title>
+          {author} is {handle}
+        </title>
+        <meta name="author" content={author} />
         <meta
           name="description"
           content={`artist, ${titles.join(', ')}, ${descriptors.join(', ')}`}

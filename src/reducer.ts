@@ -1,5 +1,10 @@
 import { sample } from 'lodash';
 
+const meta = {
+  author: 'Matt Hayes',
+  handle: '@mysterycommand',
+};
+
 const titles = [
   'computer programmer',
   'creative technologist',
@@ -19,6 +24,10 @@ const descriptors = [
 ];
 
 type State = {
+  meta: {
+    author: string;
+    handle: string;
+  };
   titles: string[];
   currentTitle: string;
   descriptors: string[];
@@ -39,6 +48,7 @@ const state = window.__STATE__ as State;
 delete window.__STATE__;
 
 export const initialState: State = state || {
+  meta,
   titles,
   currentTitle: sample(titles)!, // 'computer programmer', //
   descriptors,
@@ -62,6 +72,7 @@ export function reducer(state: State, action: Action): State {
   switch (action.type) {
     case ActionType.Change:
       return {
+        meta,
         titles,
         descriptors,
         currentTitle: getFresh(state.currentTitle, titles),

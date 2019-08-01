@@ -2,25 +2,16 @@ import React, { FC } from 'react';
 
 import './style.css';
 
-type KeyValue = {
-  [key: string]: string;
-};
-
-const Colophon: FC<{
-  name: string;
-  version: string;
-  bugs: KeyValue;
-  engines: KeyValue;
-  dependencies: KeyValue;
-  devDependencies: KeyValue;
-}> = ({
+import {
   name,
   version,
-  bugs: { url },
+  bugs,
   engines,
   dependencies,
   devDependencies,
-}) => (
+} from '../../../package.json';
+
+const Colophon: FC = () => (
   <footer className="colophon">
     <h2>
       <pre>
@@ -40,7 +31,7 @@ const Colophon: FC<{
         </a>
       </li>
       <li>
-        <a href={url} title="see a bug? file an issue!" rel="external">
+        <a href={bugs.url} title="see a bug? file an issue!" rel="external">
           <pre>
             <code>file bugs</code>
           </pre>
@@ -59,7 +50,7 @@ const Colophon: FC<{
           </pre>
         </h3>
         <ul>
-          {Object.entries(value as { [key: string]: string }).map(
+          {Object.entries((value as unknown) as { [key: string]: string }).map(
             ([key, value]) => (
               <li key={`${key}@${value}`}>
                 <a

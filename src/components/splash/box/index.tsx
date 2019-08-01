@@ -24,7 +24,7 @@ function useIntro(scale: number) {
     currentScale: [scale, scale, scale],
     currentOpacity: 0.15,
     config: config.molasses,
-    delay: 500 / scale,
+    delay: 500 / (scale - 1),
   });
 
   return [box, currentScale, currentOpacity];

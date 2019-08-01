@@ -1,14 +1,5 @@
 import { sample } from 'lodash';
 
-import {
-  name,
-  version,
-  bugs,
-  engines,
-  dependencies,
-  devDependencies,
-} from '../../../package.json';
-
 const meta = {
   author: 'Matt Hayes',
   handle: '@mysterycommand',
@@ -32,10 +23,6 @@ const descriptors = [
   'tinkerer',
 ];
 
-type KeyValue = {
-  [key: string]: string;
-};
-
 type State = {
   meta: {
     author: string;
@@ -45,14 +32,6 @@ type State = {
   currentTitle: string;
   descriptors: string[];
   currentDescriptor: string;
-  package: {
-    name: string;
-    version: string;
-    bugs: KeyValue;
-    engines: KeyValue;
-    dependencies: KeyValue;
-    devDependencies: KeyValue;
-  };
 };
 
 export enum ActionType {
@@ -74,14 +53,6 @@ export const initialState: State = state || {
   currentTitle: sample(titles)!, // 'computer programmer', //
   descriptors,
   currentDescriptor: sample(descriptors)!, // 'philosopher', //
-  package: {
-    name,
-    version,
-    bugs,
-    engines,
-    dependencies,
-    devDependencies,
-  },
 };
 
 // @ts-ignore: 2339

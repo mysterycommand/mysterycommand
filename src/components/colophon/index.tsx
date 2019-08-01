@@ -52,7 +52,7 @@ const Colophon: FC<{
       dependencies,
       devDependencies,
     }).map(([key, value]) => (
-      <>
+      <div key={`${key}@${value}`}>
         <h3>
           <pre>
             <code>{key}</code>
@@ -79,7 +79,7 @@ const Colophon: FC<{
             ),
           )}
         </ul>
-      </>
+      </div>
     ))}
   </footer>
 );

@@ -24,7 +24,7 @@ const links: {
   props: {
     href:
       key === 'node'
-        ? `https://nodejs.org/dist/v${value}/docs/api/`
+        ? `https://nodejs.org/en/`
         : `https://www.npmjs.com/package/${key}`,
     title: `${key}@${value}`,
     rel: 'external',
@@ -37,29 +37,28 @@ const Colophon: FC<{ author: string; handle: string }> = ({
   handle,
 }) => (
   <footer className="colophon">
-    <h2>
-      <pre>colophon</pre>
-    </h2>
+    <h2>colophon</h2>
     <p>
-      this site has been lovingly crafted by
-      <a href={`https://github.com/${handle.substring(1)}`}>{author}</a>(
+      this site has been lovingly crafted by{' '}
+      <a href={`https://github.com/${handle.substring(1)}`}>{author}</a> (
       <a href={`https://twitter.com/${handle.substring(1)}`}>{handle}</a>) you
-      may
+      may{' '}
       <a
         href={`https://github.com/mysterycommand/${name}/tree/v${version}`}
         title={`mysterycommand/${name}@${version}`}
         rel="external"
       >
         view the source
-      </a>
-      at your leisure, and if you see a bug or a typo please be so kind as to
+      </a>{' '}
+      at your leisure, and if you see a bug or a typo please be so kind as to{' '}
       <a href={bugs.url} title="see a bug? create an issue!" rel="external">
         create an issue
-      </a>
+      </a>{' '}
+      … and thanks for visiting
     </p>
     <div>
       this project would not be possible without the work of these fine open
-      source projects:
+      source projects:{' '}
       <Hlist>
         {links.map(({ props, text }) => (
           <a key={props.title} {...props}>
@@ -69,7 +68,7 @@ const Colophon: FC<{ author: string; handle: string }> = ({
       </Hlist>
     </div>
     <div>
-      copyright © {new Date().getFullYear()} {author}, licensed:
+      copyright © {new Date().getFullYear()} {author}, licensed:{' '}
       <Hlist className="licenses">
         {license
           .substring(1, license.length - 1)

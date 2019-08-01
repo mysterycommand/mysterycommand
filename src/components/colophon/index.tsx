@@ -57,7 +57,7 @@ const Colophon: FC<{ author: string; handle: string }> = ({
         create an issue
       </a>
     </p>
-    <p>
+    <div>
       this project would not be possible without the work of these fine open
       source projects:{' '}
       <Hlist>
@@ -67,8 +67,8 @@ const Colophon: FC<{ author: string; handle: string }> = ({
           </a>
         ))}
       </Hlist>
-    </p>
-    <p>
+    </div>
+    <div>
       copyright © {new Date().getFullYear()} {author}, licensed:{' '}
       <Hlist className="licenses">
         {license
@@ -85,7 +85,7 @@ const Colophon: FC<{ author: string; handle: string }> = ({
             </a>
           ))}
       </Hlist>
-    </p>
+    </div>
   </footer>
 );
 

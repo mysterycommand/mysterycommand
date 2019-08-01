@@ -66,6 +66,10 @@
   font-size: calc(16px + (32 - 16) * ((100vw - 375px) / 375));
 }
 
+.hero .hlist > li + li {
+  padding-left: 0.5em;
+}
+
 @media (max-width: 375px) {
   .hero .hlist {
     margin-top: 12px;

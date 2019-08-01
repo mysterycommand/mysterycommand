@@ -4,9 +4,4 @@
 
 .hlist > li {
   display: inline-block;
-  margin-right: 0.5em;
-}
-
-.hlist > li:last-of-type {
-  margin-right: 0;
 }

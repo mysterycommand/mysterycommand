@@ -38,9 +38,7 @@ const Colophon: FC<{ author: string; handle: string }> = ({
 }) => (
   <footer className="colophon">
     <h2>
-      <pre>
-        <code>colophon</code>
-      </pre>
+      <pre>colophon</pre>
     </h2>
     <p>
       this site has been lovingly crafted by{' '}
@@ -52,11 +50,11 @@ const Colophon: FC<{ author: string; handle: string }> = ({
         title={`mysterycommand/${name}@${version}`}
         rel="external"
       >
-        <code>view the source</code>
+        view the source
       </a>{' '}
       at your leisure, and if you see a bug or a typo please be so kind as to{' '}
       <a href={bugs.url} title="see a bug? create an issue!" rel="external">
-        <code>create an issue</code>
+        create an issue
       </a>
     </p>
     <p>
@@ -65,7 +63,7 @@ const Colophon: FC<{ author: string; handle: string }> = ({
       <Hlist>
         {links.map(({ props, text }) => (
           <a key={props.title} {...props}>
-            <code>{text}</code>
+            {text}
           </a>
         ))}
       </Hlist>

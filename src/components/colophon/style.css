@@ -15,7 +15,8 @@
 }
 
 .colophon .hlist > li:after {
-  content: ',';
+  content: ', ';
+  white-space: pre;
 }
 
 .colophon .hlist.licenses > li:after,

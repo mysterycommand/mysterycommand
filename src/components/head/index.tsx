@@ -3,13 +3,6 @@ import { Helmet } from 'react-helmet';
 
 import { homepage } from '../../../package.json';
 
-/**
- * @see: https://github.com/nfl/react-helmet/issues/342
- */
-// import TwitterMeta from './twitter-meta';
-// import FacebookMeta from './facebook-meta';
-// import SharedMeta from './shared-meta';
-
 const FACEBOOK_ID = '163000679';
 
 function getShortDescription(descs: string[]): string {
@@ -56,27 +49,6 @@ const Head: FC<{
         <meta name="author" content={author} />
         <meta name="description" content={longDescription} />
         <link rel="canonical" href={homepage} />
-
-        {/* @see: https://github.com/nfl/react-helmet/issues/342 */}
-        {/*
-        <SharedMeta
-          homepage={homepage}
-          title={title}
-          shortDescription={shortDescription}
-        />
-
-        <FacebookMeta
-          title={title}
-          imagePath={getImagePath('facebook')}
-          imageAlt={imageAlt}
-        />
-
-        <TwitterMeta
-          handle={handle}
-          imagePath={getImagePath('twitter')}
-          imageAlt={imageAlt}
-        />
-        */}
 
         {/* SharedMeta */}
         <meta property="og:url" content={homepage} />

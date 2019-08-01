@@ -1,6 +1,10 @@
 import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
 
+import { homepage } from '../../../package.json';
+
+const FACEBOOK_ID = '163000679';
+
 const Head: FC<{
   author: string;
   handle: string;
@@ -21,7 +25,10 @@ const Head: FC<{
     return description;
   })();
 
-  const { origin, pathname } = window.location;
+  const { origin } = new URL(
+    process.env.NODE_ENV === 'production' ? homepage : window.location.href,
+  );
+  const { pathname } = window.location;
   const image = (network: string) =>
     `${origin}/screenshots/${network}/${
       pathname === '/' ? 'index.png' : pathname.replace('html', 'png')
@@ -38,7 +45,8 @@ const Head: FC<{
         <meta name="description" content={longDescription} />
 
         {/* Facebook */}
-        <meta property="og:url" content={process.env.PUBLIC_URL} />
+        <meta property="fb:admins" content={FACEBOOK_ID} />
+        <meta property="og:url" content={homepage} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:image" content={image('facebook')} />
@@ -46,10 +54,9 @@ const Head: FC<{
         <meta property="og:description" content={shortDescription} />
         <meta property="og:site_name" content={title} />
         <meta property="og:locale" content="en_US" />
-        <meta property="article:author" content={author} />
 
         {/* Twitter */}
-        <meta name="twitter:url" content={process.env.PUBLIC_URL} />
+        <meta name="twitter:url" content={homepage} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content={handle} />
         <meta name="twitter:creator" content={handle} />

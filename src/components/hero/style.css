@@ -36,7 +36,7 @@
 }
 
 @media (max-width: 375px) {
-  .hero > header {
+  .hero > .hero-text {
     padding: 36px;
     text-shadow: 0 0 40px #ffffff, 0 0 40px #ffffff;
   }
@@ -47,7 +47,7 @@
 }
 
 @media (min-width: 750px) {
-  .hero > header {
+  .hero > .hero-text {
     padding: 72px;
     text-shadow: 0 0 80px #ffffff, 0 0 80px #ffffff;
   }

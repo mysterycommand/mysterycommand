@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 
-import './style.css';
-
 import useAppState from '../../hooks/app-state';
 import Head from '../head';
 import Hero from '../hero';
@@ -25,22 +23,20 @@ const App: FC = () => {
         titles={titles}
         descriptors={descriptors}
       />
-      <div className="app">
-        <Hero
-          author={author}
-          handle={handle}
-          currentTitle={currentTitle}
-          currentDescriptor={currentDescriptor}
-        />
-        <Colophon
-          name={name}
-          version={version}
-          bugs={bugs}
-          engines={engines}
-          dependencies={dependencies}
-          devDependencies={devDependencies}
-        />
-      </div>
+      <Hero
+        author={author}
+        handle={handle}
+        currentTitle={currentTitle}
+        currentDescriptor={currentDescriptor}
+      />
+      <Colophon
+        name={name}
+        version={version}
+        bugs={bugs}
+        engines={engines}
+        dependencies={dependencies}
+        devDependencies={devDependencies}
+      />
     </>
   );
 };

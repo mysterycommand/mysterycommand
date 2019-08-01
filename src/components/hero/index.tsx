@@ -12,9 +12,9 @@ const Hero: FC<{
   currentTitle: string;
   currentDescriptor: string;
 }> = ({ author, handle, currentTitle, currentDescriptor }) => (
-  <div className="hero">
+  <header className="hero">
     <Splash />
-    <header>
+    <div className="hero-text">
       <h1>{author} is</h1>
       <h1>
         <a href={process.env.PUBLIC_URL}>{handle}</a>
@@ -24,8 +24,8 @@ const Hero: FC<{
         currentDescriptor={currentDescriptor}
       />
       <Links />
-    </header>
-  </div>
+    </div>
+  </header>
 );
 
 export default Hero;

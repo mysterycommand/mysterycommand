@@ -29,6 +29,7 @@ const App: FC = () => {
         currentTitle={currentTitle}
         currentDescriptor={currentDescriptor}
       />
+      {/* <section>content</section> */}
       <Colophon
         name={name}
         version={version}

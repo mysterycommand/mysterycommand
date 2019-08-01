@@ -14,6 +14,7 @@ const App: FC = () => {
     currentTitle,
     descriptors,
     currentDescriptor,
+    package: { name, version, bugs, engines, dependencies, devDependencies },
   } = useAppState();
 
   return (
@@ -31,7 +32,14 @@ const App: FC = () => {
           currentTitle={currentTitle}
           currentDescriptor={currentDescriptor}
         />
-        <Colophon />
+        <Colophon
+          name={name}
+          version={version}
+          bugs={bugs}
+          engines={engines}
+          dependencies={dependencies}
+          devDependencies={devDependencies}
+        />
       </div>
     </>
   );

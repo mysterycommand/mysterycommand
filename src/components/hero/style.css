@@ -1,4 +1,4 @@
-.app {
+.hero {
   background-image: radial-gradient(circle, yellow, #fe54a1);
   color: #000000;
 
@@ -13,9 +13,7 @@
   position: relative;
 }
 
-/* [min size] + ([max size] - [min size]) * ((100vw - [min view]) / ([max view] - [min view])) */
-
-.app > header {
+.hero > .hero-text {
   width: 100vw;
   min-width: 375px;
   max-width: 750px;
@@ -28,34 +26,66 @@
   z-index: 1;
 }
 
-.app h1 {
+.hero h1 {
   margin: 0;
   font-size: calc(35px + (70 - 35) * ((100vw - 375px) / 375));
 }
 
-.app h1 + h1 {
+.hero h1 + h1 {
   margin-left: -0.875em;
 }
 
 @media (max-width: 375px) {
-  .app > header {
+  .hero > .hero-text {
     padding: 36px;
     text-shadow: 0 0 40px #ffffff, 0 0 40px #ffffff;
   }
 
-  .app h1 {
-    margin: 0;
+  .hero h1 {
     font-size: 35px;
   }
 }
 
 @media (min-width: 750px) {
-  .app > header {
+  .hero > .hero-text {
     padding: 72px;
     text-shadow: 0 0 80px #ffffff, 0 0 80px #ffffff;
   }
 
-  .app h1 {
+  .hero h1 {
     font-size: 70px;
+  }
+}
+
+.hero .hlist {
+  display: block;
+  margin-top: calc(12px + (24 - 12) * ((100vw - 375px) / 375));
+}
+
+.hero .hlist > li {
+  font-size: calc(16px + (32 - 16) * ((100vw - 375px) / 375));
+}
+
+.hero .hlist > li + li {
+  padding-left: 0.5em;
+}
+
+@media (max-width: 375px) {
+  .hero .hlist {
+    margin-top: 12px;
+  }
+
+  .hero .hlist > li {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 750px) {
+  .hero .hlist {
+    margin-top: 24px;
+  }
+
+  .hero .hlist > li {
+    font-size: 32px;
   }
 }

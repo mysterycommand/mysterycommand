@@ -1,23 +1,37 @@
 import React, { FC } from 'react';
 
-import './style.css';
+import useAppState from '../../hooks/app-state';
+import Head from '../head';
+import Hero from '../hero';
+import Colophon from '../colophon';
 
-import Descs from '../descs';
-import Links from '../links';
-import Splash from '../splash';
+const App: FC = () => {
+  const {
+    meta: { author, handle },
+    titles,
+    currentTitle,
+    descriptors,
+    currentDescriptor,
+  } = useAppState();
 
-const App: FC = () => (
-  <div className="app">
-    <Splash />
-    <header>
-      <h1>Matt Hayes is</h1>
-      <h1>
-        <a href={process.env.PUBLIC_URL}>@mysterycommand</a>
-      </h1>
-      <Descs />
-      <Links />
-    </header>
-  </div>
-);
+  return (
+    <>
+      <Head
+        author={author}
+        handle={handle}
+        titles={titles}
+        descriptors={descriptors}
+      />
+      <Hero
+        author={author}
+        handle={handle}
+        currentTitle={currentTitle}
+        currentDescriptor={currentDescriptor}
+      />
+      {/* <section>content</section> */}
+      <Colophon author={author} handle={handle} />
+    </>
+  );
+};
 
 export default App;

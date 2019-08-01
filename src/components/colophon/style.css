@@ -1,0 +1,38 @@
+.colophon {
+  background: #222222;
+  color: #fafafa;
+  overflow: hidden;
+  padding: 0 1em;
+  box-shadow: inset 0px 5px 1.5em #000000;
+}
+
+.colophon > div {
+  margin: 1em 0;
+}
+
+.colophon a {
+  color: #fafafa;
+}
+
+.colophon a:hover {
+  text-decoration: underline;
+}
+
+.colophon .hlist > li:after {
+  content: ', ';
+  white-space: pre;
+}
+
+.colophon .hlist.licenses > li:after,
+.colophon .hlist > li:last-of-type:after {
+  content: none;
+}
+
+.colophon .hlist.licenses > li {
+  margin-right: 0;
+}
+
+.colophon .hlist.licenses > li + li:before {
+  content: ' or ';
+  white-space: pre;
+}

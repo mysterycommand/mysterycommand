@@ -1,32 +1,7 @@
 .hlist {
-  margin-top: calc(12px + (24 - 12) * ((100vw - 375px) / 375));
+  display: inline;
 }
 
 .hlist > li {
   display: inline-block;
-  font-size: calc(16px + (32 - 16) * ((100vw - 375px) / 375));
-}
-
-.hlist > li + li {
-  padding-left: 0.5em;
-}
-
-@media (max-width: 375px) {
-  .hlist {
-    margin-top: 12px;
-  }
-
-  .hlist > li {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 750px) {
-  .hlist {
-    margin-top: 24px;
-  }
-
-  .hlist > li {
-    font-size: 32px;
-  }
 }

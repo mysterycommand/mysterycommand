@@ -38,6 +38,7 @@ const Head: FC<{
         <meta name="description" content={longDescription} />
 
         {/* Facebook */}
+        <meta property="og:url" content={process.env.PUBLIC_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:image" content={image('facebook')} />
@@ -48,6 +49,7 @@ const Head: FC<{
         <meta property="article:author" content={author} />
 
         {/* Twitter */}
+        <meta name="twitter:url" content={process.env.PUBLIC_URL} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content={handle} />
         <meta name="twitter:creator" content={handle} />

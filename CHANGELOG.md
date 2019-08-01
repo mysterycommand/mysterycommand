@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/mysterycommand/mysterycommand/compare/v1.6.0...v1.6.1) (2019-08-01)
+
+
+### Bug Fixes
+
+* **head:** update the twitter:card meta tag to 'summary_large_image' ([59bcf28](https://github.com/mysterycommand/mysterycommand/commit/59bcf28))
+
 # [1.6.0](https://github.com/mysterycommand/mysterycommand/compare/v1.5.0...v1.6.0) (2019-08-01)
 
 

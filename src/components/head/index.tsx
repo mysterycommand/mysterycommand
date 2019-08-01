@@ -3,7 +3,35 @@ import { Helmet } from 'react-helmet';
 
 import { homepage } from '../../../package.json';
 
+/**
+ * @see: https://github.com/nfl/react-helmet/issues/342
+ */
+// import TwitterMeta from './twitter-meta';
+// import FacebookMeta from './facebook-meta';
+// import SharedMeta from './shared-meta';
+
 const FACEBOOK_ID = '163000679';
+
+function getShortDescription(descs: string[]): string {
+  let temp = descs;
+  let shortDescription;
+
+  while ((shortDescription = temp.concat('etc…').join(', ')).length > 200) {
+    temp.pop();
+  }
+
+  return shortDescription;
+}
+
+const { pathname, href } = window.location;
+const { origin } = new URL(
+  process.env.NODE_ENV === 'production' ? homepage : href,
+);
+function getImagePath(network: string): string {
+  return `${origin}/screenshots/${network}/${
+    pathname === '/' ? 'index.png' : pathname.replace('html', 'png')
+  }`;
+}
 
 const Head: FC<{
   author: string;
@@ -13,26 +41,10 @@ const Head: FC<{
 }> = ({ author, handle, titles, descriptors }) => {
   const title = `${author} is ${handle}`;
 
-  const descs = titles.concat(descriptors);
-  const longDescription = `artist, ${descs.join(', ')}`;
-  const shortDescription = (() => {
-    let shortenedDescs = descs;
-    let description = `artist, ${shortenedDescs.join(', ')}, etc…`;
-    while (description.length > 200) {
-      shortenedDescs.pop();
-      description = `artist, ${shortenedDescs.join(', ')}, etc…`;
-    }
-    return description;
-  })();
+  const descs = ['artist'].concat(titles, descriptors);
+  const longDescription = descs.join(', ');
+  const shortDescription = getShortDescription(descs);
 
-  const { origin } = new URL(
-    process.env.NODE_ENV === 'production' ? homepage : window.location.href,
-  );
-  const { pathname } = window.location;
-  const image = (network: string) =>
-    `${origin}/screenshots/${network}/${
-      pathname === '/' ? 'index.png' : pathname.replace('html', 'png')
-    }`;
   const imageAlt = `a screenshot of ${author}'${
     author.endsWith('s') ? '' : 's'
   } website`;
@@ -43,26 +55,47 @@ const Head: FC<{
         <title>{title}</title>
         <meta name="author" content={author} />
         <meta name="description" content={longDescription} />
+        <link rel="canonical" href={homepage} />
 
-        {/* Facebook */}
-        <meta property="fb:admins" content={FACEBOOK_ID} />
+        {/* @see: https://github.com/nfl/react-helmet/issues/342 */}
+        {/*
+        <SharedMeta
+          homepage={homepage}
+          title={title}
+          shortDescription={shortDescription}
+        />
+
+        <FacebookMeta
+          title={title}
+          imagePath={getImagePath('facebook')}
+          imageAlt={imageAlt}
+        />
+
+        <TwitterMeta
+          handle={handle}
+          imagePath={getImagePath('twitter')}
+          imageAlt={imageAlt}
+        />
+        */}
+
+        {/* SharedMeta */}
         <meta property="og:url" content={homepage} />
-        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-        <meta property="og:image" content={image('facebook')} />
-        <meta property="og:image:alt" content={imageAlt} />
         <meta property="og:description" content={shortDescription} />
+
+        {/* FacebookMeta */}
+        <meta property="fb:admins" content={FACEBOOK_ID} />
+        <meta property="og:type" content="website" />
         <meta property="og:site_name" content={title} />
+        <meta property="og:image" content={getImagePath('facebook')} />
+        <meta property="og:image:alt" content={imageAlt} />
         <meta property="og:locale" content="en_US" />
 
-        {/* Twitter */}
-        <meta name="twitter:url" content={homepage} />
+        {/* TwitterMeta */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content={handle} />
         <meta name="twitter:creator" content={handle} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={shortDescription} />
-        <meta name="twitter:image" content={image('twitter')} />
+        <meta name="twitter:image" content={getImagePath('twitter')} />
         <meta name="twitter:image:alt" content={imageAlt} />
       </Helmet>
     </>

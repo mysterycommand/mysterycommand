@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/mysterycommand/mysterycommand/compare/v1.5.0...v1.6.0) (2019-08-01)
+
+
+### Features
+
+* **head:** clean up head by splitting og tags into groups, but react-helmet doesn't support this ([b101126](https://github.com/mysterycommand/mysterycommand/commit/b101126))
+
 # [1.5.0](https://github.com/mysterycommand/mysterycommand/compare/v1.4.0...v1.5.0) (2019-08-01)
 
 

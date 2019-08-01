@@ -1,3 +1,20 @@
+# [1.5.0](https://github.com/mysterycommand/mysterycommand/compare/v1.4.0...v1.5.0) (2019-08-01)
+
+
+### Bug Fixes
+
+* **colophon:** fix test errors, update styling ([2132aca](https://github.com/mysterycommand/mysterycommand/commit/2132aca))
+* **hero:** make sure the hero-text (ne header)'s padding is clamped ([715011b](https://github.com/mysterycommand/mysterycommand/commit/715011b))
+
+
+### Features
+
+* **colophon:** add a bunch of links to the colophon, pull stuff from package.json ([36fc08c](https://github.com/mysterycommand/mysterycommand/commit/36fc08c))
+* **colophon:** add copyright and licenses to colophon ([aa8ae65](https://github.com/mysterycommand/mysterycommand/commit/aa8ae65))
+* **components/head:** add a head component to render dynamic meta tags and og/twitter tags ([9980d9a](https://github.com/mysterycommand/mysterycommand/commit/9980d9a))
+* **favicon.ico:** update favicon, manual for now ([3ce5342](https://github.com/mysterycommand/mysterycommand/commit/3ce5342))
+* **hero, colophon:** split the app into parts, shuffle css around, stub in a colophon ([4447b7b](https://github.com/mysterycommand/mysterycommand/commit/4447b7b))
+
 # [1.4.0](https://github.com/mysterycommand/mysterycommand/compare/v1.3.0...v1.4.0) (2019-07-23)
 
 

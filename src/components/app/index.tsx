@@ -29,7 +29,7 @@ const App: FC = () => {
         currentDescriptor={currentDescriptor}
       />
       {/* <section>content</section> */}
-      <Colophon />
+      <Colophon author={author} handle={handle} />
     </>
   );
 };

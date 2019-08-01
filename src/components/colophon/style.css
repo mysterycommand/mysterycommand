@@ -13,3 +13,11 @@
 .colophon a:hover {
   text-decoration: underline;
 }
+
+.colophon .hlist > li:after {
+  content: ',';
+}
+
+.colophon .hlist > li:last-of-type:after {
+  content: none;
+}

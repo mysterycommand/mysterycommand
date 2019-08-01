@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, AnchorHTMLAttributes } from 'react';
 
 import './style.css';
 
@@ -10,68 +10,65 @@ import {
   dependencies,
   devDependencies,
 } from '../../../package.json';
+import Hlist from '../hlist';
 
-const Colophon: FC = () => (
+const links: {
+  props: AnchorHTMLAttributes<HTMLAnchorElement>;
+  text: string;
+}[] = Object.entries({
+  ...engines,
+  ...dependencies,
+  ...devDependencies,
+}).map(([key, value]) => ({
+  props: {
+    href:
+      key === 'node'
+        ? `https://nodejs.org/dist/v${value}/docs/api/`
+        : `https://www.npmjs.com/package/${key}`,
+    title: `${key}@${value}`,
+    rel: 'external',
+  },
+  text: key,
+}));
+
+const Colophon: FC<{ author: string; handle: string }> = ({
+  author,
+  handle,
+}) => (
   <footer className="colophon">
     <h2>
       <pre>
         <code>colophon</code>
       </pre>
     </h2>
-    <ul>
-      <li>
-        <a
-          href={`https://github.com/mysterycommand/${name}/tree/v${version}`}
-          title={`mysterycommand/${name}@${version}`}
-          rel="external"
-        >
-          <pre>
-            <code>view source</code>
-          </pre>
-        </a>
-      </li>
-      <li>
-        <a href={bugs.url} title="see a bug? file an issue!" rel="external">
-          <pre>
-            <code>file bugs</code>
-          </pre>
-        </a>
-      </li>
-    </ul>
-    {Object.entries({
-      engines,
-      dependencies,
-      devDependencies,
-    }).map(([key, value]) => (
-      <div key={`${key}@${value}`}>
-        <h3>
-          <pre>
-            <code>{key}</code>
-          </pre>
-        </h3>
-        <ul>
-          {Object.entries((value as unknown) as { [key: string]: string }).map(
-            ([key, value]) => (
-              <li key={`${key}@${value}`}>
-                <a
-                  href={
-                    key === 'node'
-                      ? `https://nodejs.org/dist/v${value}/docs/api/`
-                      : `https://www.npmjs.com/package/${key}`
-                  }
-                  title={`${key}@${value}`}
-                  rel="external"
-                >
-                  <pre>
-                    <code>{key}</code>
-                  </pre>
-                </a>
-              </li>
-            ),
-          )}
-        </ul>
-      </div>
-    ))}
+    <p>
+      this site has been lovingly crafted by{' '}
+      <a href={`https://github.com/${handle.substring(1)}`}>{author}</a> (
+      <a href={`https://twitter.com/${handle.substring(1)}`}>{handle}</a>). you
+      may{' '}
+      <a
+        href={`https://github.com/mysterycommand/${name}/tree/v${version}`}
+        title={`mysterycommand/${name}@${version}`}
+        rel="external"
+      >
+        <code>view the source</code>
+      </a>{' '}
+      at your leisure, and if you see a bug or a typo please be so kind as to{' '}
+      <a href={bugs.url} title="see a bug? create an issue!" rel="external">
+        <code>create an issue</code>
+      </a>
+    </p>
+    <p>
+      this project would not be possible without the work of these fine open
+      source projects:{' '}
+      <Hlist>
+        {links.map(({ props, text }) => (
+          <a key={props.title} {...props}>
+            <code>{text}</code>
+          </a>
+        ))}
+      </Hlist>
+    </p>
   </footer>
 );
 

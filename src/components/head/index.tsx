@@ -64,7 +64,7 @@ const Head: FC<{
         <meta property="og:locale" content="en_US" />
 
         {/* TwitterMeta */}
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content={handle} />
         <meta name="twitter:creator" content={handle} />
         <meta name="twitter:image" content={getImagePath('twitter')} />

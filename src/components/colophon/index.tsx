@@ -6,6 +6,7 @@ import {
   name,
   version,
   bugs,
+  license,
   engines,
   dependencies,
   devDependencies,
@@ -67,6 +68,24 @@ const Colophon: FC<{ author: string; handle: string }> = ({
             <code>{text}</code>
           </a>
         ))}
+      </Hlist>
+    </p>
+    <p>
+      copyright © {new Date().getFullYear()} {author}, licensed:{' '}
+      <Hlist className="licenses">
+        {license
+          .substring(1, license.length - 1)
+          .split(' OR ')
+          .map(lic => (
+            <a
+              key={lic}
+              href={`https://github.com/mysterycommand/${name}/blob/v${version}/LICENSE-${lic}`}
+              title={lic}
+              rel="external"
+            >
+              {lic}
+            </a>
+          ))}
       </Hlist>
     </p>
   </footer>

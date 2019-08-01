@@ -18,6 +18,16 @@
   content: ',';
 }
 
+.colophon .hlist.licenses > li:after,
 .colophon .hlist > li:last-of-type:after {
   content: none;
+}
+
+.colophon .hlist.licenses > li {
+  margin-right: 0;
+}
+
+.colophon .hlist.licenses > li + li:before {
+  content: ' or ';
+  white-space: pre;
 }

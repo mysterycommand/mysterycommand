@@ -31,7 +31,8 @@
     "reset": "npm run clean node_modules/ && npm install",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "react-snap && node scripts/screenshots.js",
+    "postbuild": "react-snap",
+    "screenshots": "node scripts/screenshots.js",
     "test": "react-scripts test",
     "lint": "eslint 'src/**/*.@(j|t)s?(x)'",
     "eject": "react-scripts eject"

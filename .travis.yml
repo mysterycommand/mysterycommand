@@ -25,6 +25,7 @@ script:
   - npm run lint
   - npm test
   - npm run build
+  - npm run screenshots
 
 after_success:
   - test $TRAVIS_PULL_REQUEST != "false" && npx semantic-release-github-pr

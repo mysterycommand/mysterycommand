@@ -58,13 +58,13 @@
   },
   "dependencies": {
     "lodash": "4.17.15",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
+    "react": "16.10.1",
+    "react-dom": "16.10.1",
     "react-helmet": "5.2.1",
     "react-icons": "3.7.0",
     "react-spring": "8.0.27",
     "react-three-fiber": "2.4.3",
-    "three": "0.108.0"
+    "three": "0.109.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "3.0.4",
@@ -74,9 +74,9 @@
     "@semantic-release/npm": "5.1.15",
     "@semantic-release/release-notes-generator": "7.3.0",
     "@types/jest": "24.0.18",
-    "@types/lodash": "4.14.140",
+    "@types/lodash": "4.14.141",
     "@types/node": "12.7.8",
-    "@types/react": "16.9.3",
+    "@types/react": "16.9.4",
     "@types/react-dom": "16.9.1",
     "@types/react-helmet": "5.0.11",
     "commitizen": "4.0.3",

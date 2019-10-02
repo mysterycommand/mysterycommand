@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/mysterycommand/mysterycommand/compare/v1.6.1...v1.6.2) (2019-10-02)
+
+
+### Bug Fixes
+
+* fix npm high severity vlnerabilities ([c69f3d3](https://github.com/mysterycommand/mysterycommand/commit/c69f3d3))
+
 ## [1.6.1](https://github.com/mysterycommand/mysterycommand/compare/v1.6.0...v1.6.1) (2019-08-01)
 
 

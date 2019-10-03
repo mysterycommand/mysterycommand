@@ -1,5 +1,5 @@
 import React, { FC, useRef } from 'react';
-import { useRender } from 'react-three-fiber';
+import { useFrame } from 'react-three-fiber';
 import { Group } from 'three';
 import { animated, useSpring } from 'react-spring/three';
 import { config } from 'react-spring';
@@ -7,7 +7,7 @@ import { config } from 'react-spring';
 function useIntro(scale: number) {
   const box = useRef<Group>();
 
-  useRender(() => {
+  useFrame(() => {
     if (!(box && box.current)) {
       return;
     }

@@ -1,6 +1,6 @@
 {
   "name": "mysterycommand",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "source code for my personal/portfolio website",
   "private": true,
   "repository": {
@@ -67,7 +67,7 @@
     "react-helmet": "5.2.1",
     "react-icons": "3.7.0",
     "react-spring": "8.0.27",
-    "react-three-fiber": "2.4.3",
+    "react-three-fiber": "3.0.0",
     "three": "0.109.0"
   },
   "devDependencies": {

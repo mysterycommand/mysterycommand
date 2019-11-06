@@ -86,6 +86,6 @@
     "react-snap": "1.23.0",
     "semantic-release": "15.13.30",
     "semantic-release-github-pr": "git+https://github.com/mysterycommand/semantic-release-github-pr.git#fix/34-and-35",
-    "typescript": "3.6.4"
+    "typescript": "3.7.2"
   }
 }

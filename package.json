@@ -81,7 +81,7 @@
     "@types/react-helmet": "5.0.14",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
-    "prettier": "1.18.2",
+    "prettier": "1.19.1",
     "react-scripts": "3.2.0",
     "react-snap": "1.23.0",
     "semantic-release": "15.13.30",

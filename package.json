@@ -64,7 +64,7 @@
     "react-icons": "3.8.0",
     "react-spring": "8.0.27",
     "react-three-fiber": "3.0.15",
-    "three": "0.110.0"
+    "three": "0.111.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "3.0.6",

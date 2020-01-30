@@ -3,6 +3,9 @@ const { promisify } = require('util');
 
 const { run } = require('react-snap');
 
+const package = require('../package.json');
+const { reactSnap } = package;
+
 const pexec = promisify(exec);
 
 [
@@ -32,6 +35,7 @@ const pexec = promisify(exec);
   await run({
     destination,
     viewport,
+    ...reactSnap,
     saveAs: 'png',
     port: 45678 + i,
   });

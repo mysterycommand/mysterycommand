@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/mysterycommand/mysterycommand/compare/v1.6.2...v1.6.3) (2020-01-30)
+
+
+### Bug Fixes
+
+* use promisified exec ([509a1b0](https://github.com/mysterycommand/mysterycommand/commit/509a1b015f8bfd9bc8a052e1f10d8165a480fbde))
+
 ## [1.6.2](https://github.com/mysterycommand/mysterycommand/compare/v1.6.1...v1.6.2) (2019-10-02)
 
 

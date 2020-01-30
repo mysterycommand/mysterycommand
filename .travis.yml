@@ -25,6 +25,7 @@ script:
   - npm run lint
   - npm test
   - npm run build
+  - npm run screenshots
 
 after_success:
   - test $TRAVIS_PULL_REQUEST != "false" && npx semantic-release-github-pr
@@ -32,7 +33,7 @@ after_success:
 deploy:
   # deploy a git tag, release notes, bump package.json, update READMEs
   - provider: script
-    skip_cleanup: true
+    cleanup: false
     script: npx semantic-release
     on:
       branch: master
@@ -44,7 +45,7 @@ deploy:
     target_branch: master
     github_token: $GH_TOKEN
     allow_empty_commit: true
-    skip_cleanup: true
+    cleanup: false
     keep_history: true
     local_dir: build
     on:

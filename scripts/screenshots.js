@@ -22,7 +22,7 @@ const pexec = promisify(exec);
   },
 ].forEach(async ({ destination, viewport }, i) => {
   try {
-    await exec(`mkdir -p ${destination}`);
+    await pexec(`mkdir -p ${destination}`);
   } catch (error) {
     throw new Error(
       `couldn't run \`mkdir -p ${destination}\`, original error:\n${error.message}`,

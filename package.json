@@ -23,8 +23,8 @@
   },
   "homepage": "https://mysterycommand.com",
   "engines": {
-    "node": "12.13.1",
-    "npm": "6.13.1"
+    "node": ">=12",
+    "npm": "6.13.7"
   },
   "scripts": {
     "clean": "rm -rf build/ coverage/",
@@ -65,31 +65,31 @@
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-helmet": "5.2.1",
-    "react-icons": "3.8.0",
+    "react-icons": "3.9.0",
     "react-spring": "8.0.27",
-    "react-three-fiber": "3.0.15",
-    "three": "0.111.0"
+    "react-three-fiber": "4.0.12",
+    "three": "0.112.1"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "3.0.6",
+    "@semantic-release/changelog": "5.0.0",
     "@semantic-release/commit-analyzer": "6.3.3",
     "@semantic-release/git": "7.0.18",
-    "@semantic-release/github": "5.5.5",
-    "@semantic-release/npm": "5.3.4",
-    "@semantic-release/release-notes-generator": "7.3.5",
-    "@types/jest": "24.0.23",
+    "@semantic-release/github": "5.5.8",
+    "@semantic-release/npm": "5.3.5",
+    "@semantic-release/release-notes-generator": "9.0.0",
+    "@types/jest": "25.1.1",
     "@types/lodash": "4.14.149",
-    "@types/node": "12.12.14",
-    "@types/react": "16.9.13",
-    "@types/react-dom": "16.9.4",
-    "@types/react-helmet": "5.0.14",
+    "@types/node": "13.5.2",
+    "@types/react": "16.9.19",
+    "@types/react-dom": "16.9.5",
+    "@types/react-helmet": "5.0.15",
     "commitizen": "4.0.3",
-    "cz-conventional-changelog": "3.0.2",
+    "cz-conventional-changelog": "3.1.0",
     "prettier": "1.19.1",
-    "react-scripts": "3.2.0",
+    "react-scripts": "3.3.0",
     "react-snap": "1.23.0",
-    "semantic-release": "15.13.31",
+    "semantic-release": "15.14.0",
     "semantic-release-github-pr": "git+https://github.com/mysterycommand/semantic-release-github-pr.git#fix/34-and-35",
-    "typescript": "3.7.2"
+    "typescript": "3.7.5"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "mysterycommand",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "source code for my personal/portfolio website",
   "private": true,
   "repository": {
@@ -56,6 +56,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "reactSnap": {
+    "waitFor": 10000
   },
   "dependencies": {
     "lodash": "4.17.15",

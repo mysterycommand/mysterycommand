@@ -23,8 +23,8 @@
   },
   "homepage": "https://mysterycommand.com",
   "engines": {
-    "node": "12.13.1",
-    "npm": "6.13.1"
+    "node": ">=12",
+    "npm": "6.13.7"
   },
   "scripts": {
     "clean": "rm -rf build/ coverage/",

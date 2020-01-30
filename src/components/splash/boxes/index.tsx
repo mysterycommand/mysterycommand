@@ -6,7 +6,7 @@ import Box from '../box';
 
 const Boxes: FC = () => {
   return (
-    <div className="splash">
+    <div className="boxes">
       <Canvas>
         <ambientLight color={new Color('cyan')} intensity={0.5} />
         <directionalLight />

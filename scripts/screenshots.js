@@ -37,7 +37,6 @@ const pexec = promisify(exec);
     viewport,
     ...reactSnap,
     saveAs: 'png',
-    waitFor: 10000,
     // @see: react-snap/index.js
     port: 45679 + i,
   });

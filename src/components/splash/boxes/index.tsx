@@ -1,18 +1,13 @@
 import React, { FC } from 'react';
 import { Canvas } from 'react-three-fiber';
-import { Color, Vector3, WebGLRenderer } from 'three';
+import { Color, Vector3 } from 'three';
 
 import Box from '../box';
-
-const gl: Partial<WebGLRenderer> = {
-  // @ts-ignore
-  premultipliedAlpha: false,
-};
 
 const Boxes: FC = () => {
   return (
     <div className="boxes">
-      <Canvas gl={gl}>
+      <Canvas>
         <ambientLight color={new Color('cyan')} intensity={0.5} />
         <directionalLight />
         <directionalLight

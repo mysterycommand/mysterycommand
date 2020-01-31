@@ -24,11 +24,12 @@
   "homepage": "https://mysterycommand.com",
   "engines": {
     "node": ">=12",
-    "npm": "6.13.7"
+    "npm": "6.13.7",
+    "yarn": "1.21.1"
   },
   "scripts": {
     "clean": "rm -rf build/ coverage/",
-    "reset": "npm run clean node_modules/ && npm install",
+    "reset": "yarn clean node_modules/ && yarn install",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "postbuild": "react-snap",
@@ -89,7 +90,7 @@
     "react-scripts": "3.3.0",
     "react-snap": "1.23.0",
     "semantic-release": "15.14.0",
-    "semantic-release-github-pr": "git+https://github.com/mysterycommand/semantic-release-github-pr.git#fix/34-and-35",
+    "semantic-release-github-pr": "6.0.0",
     "typescript": "3.7.5"
   }
 }

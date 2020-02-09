@@ -38,9 +38,12 @@ after_success:
   - test $TRAVIS_PULL_REQUEST != "false" && npx semantic-release-github-pr
 
 deploy:
+  # opt in to dpl v2
+  # @see https://docs.travis-ci.com/user/deployment-v2#how-to-opt-in-to-v2
+  # @see https://docs.travis-ci.com/user/deployment-v2#cleaning-up-the-git-working-directory
+  edge: true
   # deploy a git tag, release notes, bump package.json, update READMEs
   - provider: script
-    cleanup: false
     script: npx semantic-release
     on:
       branch: master
@@ -52,7 +55,6 @@ deploy:
     target_branch: master
     github_token: $GH_TOKEN
     allow_empty_commit: true
-    cleanup: false
     keep_history: true
     local_dir: build
     on:

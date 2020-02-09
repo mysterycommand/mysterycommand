@@ -40,7 +40,7 @@ after_success:
 deploy:
   # deploy a git tag, release notes, bump package.json, update READMEs
   - provider: script
-    cleanup: false
+    skip_cleanup: true
     script: npx semantic-release
     on:
       branch: master
@@ -52,7 +52,7 @@ deploy:
     target_branch: master
     github_token: $GH_TOKEN
     allow_empty_commit: true
-    cleanup: false
+    skip_cleanup: true
     keep_history: true
     local_dir: build
     on:

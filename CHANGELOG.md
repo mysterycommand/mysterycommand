@@ -1,3 +1,17 @@
+# [1.7.0](https://github.com/mysterycommand/mysterycommand/compare/v1.6.3...v1.7.0) (2020-02-09)
+
+
+### Bug Fixes
+
+* class name + styles ([409a862](https://github.com/mysterycommand/mysterycommand/commit/409a862312e346c4778511c222c628a415c186dd))
+* opt in to dpl v2 to make skip_cleanup: true/cleanup: false the default ([d19d26b](https://github.com/mysterycommand/mysterycommand/commit/d19d26bec85f3b8dffe5845545be33c3b6bfe990))
+* v2 is more different than I thought at first glance, just use try the old way until it's time to really rewrite all this ([de3ea04](https://github.com/mysterycommand/mysterycommand/commit/de3ea04674d308514a0522e9e3f41ebe31ab0ea4))
+
+
+### Features
+
+* **screenshots:** use a fork of react-snap that shims rAF to get screenshots working ([b454159](https://github.com/mysterycommand/mysterycommand/commit/b454159a9bc780c8c2c3aee361afd00c9cea9d8b))
+
 ## [1.6.3](https://github.com/mysterycommand/mysterycommand/compare/v1.6.2...v1.6.3) (2020-01-30)
 
 

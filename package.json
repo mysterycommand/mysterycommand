@@ -91,6 +91,6 @@
     "react-snap": "https://github.com/mysterycommand/react-snap#feat/shim-requestAnimationFrame",
     "semantic-release": "17.0.4",
     "semantic-release-github-pr": "6.0.0",
-    "typescript": "3.7.5"
+    "typescript": "3.8.3"
   }
 }

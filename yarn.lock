@@ -1167,14 +1167,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.7":
-  version "7.8.7"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.7.tgz#8fefce9802db54881ba59f90bb28719b4996324d"
-  integrity sha512-+AATMUFppJDw6aiR5NVPHqIQBlV/Pj8wY/EZH+lmvRdUo9xBaz/rF3alAwFJQavvKfeOlPE7oaaDHVbcySbCsg==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
   integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
@@ -11387,10 +11380,10 @@ react-spring@8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react-three-fiber@4.0.22:
-  version "4.0.22"
-  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-4.0.22.tgz#a0604ab0b581f2671859c222276a50159e9feb13"
-  integrity sha512-sAf/9WV5r3j3FIPXOV0vkv40jgqGSYxIIMF5prZp9nS6gHOWWiXkS+HeD6uO1QU4it/GnrGWLGd0cqoT8Ba2hQ==
+react-three-fiber@4.0.23:
+  version "4.0.23"
+  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-4.0.23.tgz#a6165d9484bdd9914e95a5c1c789e002be914b3a"
+  integrity sha512-ZF15NoHsXFp6MFblNMAwVpGxo4TRkPeJ045Za8lcelRaaTHlR/ZhoeJWqyGfMHTWM8Uzq8w2qjgQGGyx6xsMZA==
   dependencies:
     "@babel/runtime" "^7.8.7"
     "@juggle/resize-observer" "^3.1.1"

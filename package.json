@@ -68,7 +68,7 @@
     "react-helmet": "5.2.1",
     "react-icons": "3.9.0",
     "react-spring": "8.0.27",
-    "react-three-fiber": "4.0.26",
+    "react-three-fiber": "4.0.27",
     "three": "0.115.0"
   },
   "devDependencies": {

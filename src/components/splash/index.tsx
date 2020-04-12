@@ -3,7 +3,7 @@ import React, { FC, useState, useEffect } from 'react';
 import './style.css';
 
 const Splash: FC = () => {
-  const [AsyncComponent, setAsyncComponent] = useState();
+  const [AsyncComponent, setAsyncComponent] = useState<FC>();
 
   useEffect(() => {
     import('./boxes').then(({ default: Boxes }) => {

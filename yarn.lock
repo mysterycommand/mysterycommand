@@ -13176,10 +13176,10 @@ text-table@0.2.0, text-table@^0.2.0, text-table@~0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-three@0.116.0:
-  version "0.116.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.116.0.tgz#282b21c00feb09d0303a579ae86c649ebd6a06c6"
-  integrity sha512-6KTGp6mfs0hGgY+2/UtAfxa1w4vNxNSPp6Sdu7DjnCzQZwWX6Q1hL5awyM3zPWDaPEsuRRNt2jIZPp/kwsPgjg==
+three@0.116.1:
+  version "0.116.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.116.1.tgz#a393f7a81fdc3e2fbf57ded5ba47dc5bd3678ce0"
+  integrity sha512-l2JCMiA/lVZAuSrLWRYMalvpR+0j8hbIhCpfs4V6JFnw2+JQEQJ5HltNpfFr+9TDpQts1BhtcISehWf/xBGPvQ==
 
 throat@^4.0.0:
   version "4.1.0"

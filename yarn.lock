@@ -11450,10 +11450,10 @@ react-spring@8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react-three-fiber@4.2.13:
-  version "4.2.13"
-  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-4.2.13.tgz#1a53672507301101d77723ab6291eb2248875d56"
-  integrity sha512-BZ48cqWIcnOAPRtOYyPXlNUQDKbizJDY+uGhjWD1uHogBxUpuOyTGvMrm6fd6PNqvq70RRcessUeO2szBwJn3w==
+react-three-fiber@4.2.14:
+  version "4.2.14"
+  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-4.2.14.tgz#8a4f614471b752665740cd061db48bd2da1d45bf"
+  integrity sha512-dXtebOLoevmna8lyTJykirqqeGviv4lZUwByQy6nOlXoeCaedjh7IhphR5d3QHHyD/0ou3gclBZ8nMeZM+e4sg==
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@juggle/resize-observer" "^3.1.3"

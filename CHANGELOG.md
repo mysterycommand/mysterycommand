@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/mysterycommand/mysterycommand/compare/v1.7.0...v1.8.0) (2020-07-27)
+
+
+### Features
+
+* **manifest:** update favicon, add logos, update manifest ([e9dff51](https://github.com/mysterycommand/mysterycommand/commit/e9dff5124c3975783e37236305d91d3e9062fdf8))
+
 # [1.7.0](https://github.com/mysterycommand/mysterycommand/compare/v1.6.3...v1.7.0) (2020-02-09)
 
 

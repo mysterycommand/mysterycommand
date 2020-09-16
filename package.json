@@ -86,7 +86,7 @@
     "@types/react-helmet": "6.1.0",
     "commitizen": "4.2.1",
     "cz-conventional-changelog": "3.3.0",
-    "prettier": "2.1.1",
+    "prettier": "2.1.2",
     "react-scripts": "3.4.3",
     "react-snap": "https://github.com/mysterycommand/react-snap#feat/shim-requestAnimationFrame",
     "semantic-release": "17.1.1",

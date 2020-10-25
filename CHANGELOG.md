@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/mysterycommand/mysterycommand/compare/v1.8.0...v1.8.1) (2020-10-25)
+
+
+### Bug Fixes
+
+* remove service-worker and import (wasn't actually using it anyway) ([ae29d6e](https://github.com/mysterycommand/mysterycommand/commit/ae29d6eabcf4b277ccc74b479ead7c577ba58687))
+
 # [1.8.0](https://github.com/mysterycommand/mysterycommand/compare/v1.7.0...v1.8.0) (2020-07-27)
 
 

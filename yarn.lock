@@ -1303,11 +1303,6 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@juggle/resize-observer@^3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.2.0.tgz#5e0b448d27fe3091bae6216456512c5904d05661"
-  integrity sha512-fsLxt0CHx2HCV9EL8lDoVkwHffsA0snUpddYjdLyXcG5E41xaamn9ZyQqOE9TUJdrRlH8/hjIf+UdOdDeKCUgg==
-
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz#3a582bdb53804c6ba6d146579c46e52130cf4a3b"
@@ -11417,20 +11412,19 @@ react-spring@8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react-three-fiber@5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-5.2.1.tgz#2d33e3b1af039795b01fed0622318cced7173fcb"
-  integrity sha512-fhHbdVJre3E8SKbCjJOXA4xXDZIhSsIsBZcmhgSmwrVuMZ191wtE96fbxNKDADb3cunfMSrr4Her+vfOnoQ/oQ==
+react-three-fiber@5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-5.3.0.tgz#043cc2d195570a497ac66f4cb1fad41686be41c7"
+  integrity sha512-cBcxNGTbzlIexs5p/S1uen6dgYWbnl/Lq2TP3PPP/s2o2vOZHVmnhoaSUC/ThRr5/0X6GTuFmBw04rGrIV99Iw==
   dependencies:
     "@babel/runtime" "^7.12.1"
-    "@juggle/resize-observer" "^3.2.0"
     react-merge-refs "^1.1.0"
     react-reconciler "0.26.1"
     react-use-measure "^2.0.3"
     resize-observer-polyfill "^1.5.1"
     scheduler "0.20.1"
     tiny-emitter "^2.1.0"
-    use-asset "^0.1.4"
+    use-asset "^0.1.5"
     utility-types "^3.10.0"
 
 react-use-measure@^2.0.3:
@@ -13719,10 +13713,10 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
-use-asset@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/use-asset/-/use-asset-0.1.4.tgz#f5cd4fda9f3d91268dd6b2c26d38d0ad159b6a1d"
-  integrity sha512-HgCtnRQeQrbOKCgrEmEw34PBOzkfP+sc1E/l/IOB3JiFNLLCz94pvIzBXv53d3W/5L4TVAEFyzu7XtSBg+D/dA==
+use-asset@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/use-asset/-/use-asset-0.1.5.tgz#196b6edf9f162bb900e0990888da3215514dec29"
+  integrity sha512-h1SDwd1OTbFPM076CiDrTOGk+9xVKBO6WRBo8Max/Bi9QxkNZqjOLO5VGEXwFPeXv2hkyDZv2V3RFI2cbkWLHw==
   dependencies:
     fast-deep-equal "^3.1.3"
 

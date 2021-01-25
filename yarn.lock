@@ -12239,10 +12239,10 @@ semantic-release-plugin-decorators@^3.0.0:
   resolved "https://registry.yarnpkg.com/semantic-release-plugin-decorators/-/semantic-release-plugin-decorators-3.0.0.tgz#b4cbe9cda7e9e2198caf8103cf56de9742d6f5e4"
   integrity sha512-BIUUe9gUwH+N5k/fr9KEin/2cU80r62kLBPLS/o9Dl/TK3gNsu4CJgb7SAJyWvoothDRbWLZSgTS3Qz8UJuT/Q==
 
-semantic-release@17.3.6:
-  version "17.3.6"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-17.3.6.tgz#0390eb9c4d13e82dbf0f8e5700f196b599fa2a12"
-  integrity sha512-zPAFxmnMtEVbN1Lzxz+CMXlt5a9txB/PRWaVq+oAC9Mppbax/vWXZ0kisHX92O+BjEBbsaFtISjz82E+2Ro9gQ==
+semantic-release@17.3.7:
+  version "17.3.7"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-17.3.7.tgz#a54a8ccf443c7389706c9e3c52f2a9433e0581f7"
+  integrity sha512-mMWaxykq1+mZu7hvUjEdUhJXb+BvEJhcuy15hog3+8XWZqmxRfcdlW/aTBav8rWUZ16bEevWVc6qHwsq3aPGiQ==
   dependencies:
     "@semantic-release/commit-analyzer" "^8.0.0"
     "@semantic-release/error" "^2.2.0"
@@ -12256,7 +12256,7 @@ semantic-release@17.3.6:
     execa "^5.0.0"
     figures "^3.0.0"
     find-versions "^4.0.0"
-    get-stream "^5.0.0"
+    get-stream "^6.0.0"
     git-log-parser "^1.2.0"
     hook-std "^2.0.0"
     hosted-git-info "^3.0.0"

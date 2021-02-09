@@ -89,7 +89,7 @@
     "prettier": "2.2.1",
     "react-scripts": "4.0.1",
     "react-snap": "https://github.com/mysterycommand/react-snap#feat/shim-requestAnimationFrame",
-    "semantic-release": "17.3.7",
+    "semantic-release": "17.3.8",
     "semantic-release-github-pr": "6.0.1",
     "typescript": "4.1.3"
   }

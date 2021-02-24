@@ -11499,10 +11499,10 @@ react-spring@8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react-three-fiber@5.3.17:
-  version "5.3.17"
-  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-5.3.17.tgz#7a3a61db27ebeb59d8dae70fd1505de2d7ff0097"
-  integrity sha512-OwGw4scfcJz0/vYjR42MwTIKarAQlnmDJICKPwcIOzh3Rl1I/1sx7ZSKAzeQGt6+CpigNlGFsgU0Gn5mPltLyw==
+react-three-fiber@5.3.19:
+  version "5.3.19"
+  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-5.3.19.tgz#aa74078dfd9e2739241a1e2e2957d015059fa9da"
+  integrity sha512-UJyTTIsZ0qdSopejslLVclR2jNtHJamnTmPxoJ9vDWIws+5/E2JYOHQv6W9HrnBIH19caEB5rdKvphur/VUpiQ==
   dependencies:
     "@babel/runtime" "^7.12.1"
     react-merge-refs "^1.1.0"

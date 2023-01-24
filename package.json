@@ -67,7 +67,7 @@
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",
     "react-icons": "4.7.1",
-    "react-spring": "8.0.27",
+    "react-spring": "9.6.1",
     "react-three-fiber": "5.3.20",
     "three": "0.126.0"
   },

@@ -87,7 +87,7 @@
     "commitizen": "4.2.3",
     "cz-conventional-changelog": "3.3.0",
     "prettier": "2.2.1",
-    "react-scripts": "4.0.1",
+    "react-scripts": "4.0.3",
     "react-snap": "https://github.com/mysterycommand/react-snap#feat/shim-requestAnimationFrame",
     "semantic-release": "17.3.7",
     "semantic-release-github-pr": "6.0.1",
